@@ -12,13 +12,13 @@ def group(x,y,z):
     group_point = [(x[i], y[i], z[i]) for i in range(0, len(x))]
     return group_point
 
-time = 0
+iteration = 0
 collusions = 0
 non_collusions = 0
 
-while(time < 2):
+while(iteration < 100):
     
-    time = time + 1 
+    iteration = iteration + 1 
     available_particles = 1000 #total number of particles available - number of potential collusions is // 2. 
     figure = plt.figure()
     model = figure.add_subplot(111, projection='3d')
@@ -41,7 +41,7 @@ while(time < 2):
     model.scatter(x, y, z, c= 'green', marker='o', s=0.102)
     model.scatter(x2, y2, z2, c= 'orange', marker='o', s=0.181)
     plt.title("SIMULATION NUMBER")
-    plt.suptitle(time)
+    plt.suptitle(iteration)
     
     model.xaxis.set_tick_params(labelsize=1)
     model.yaxis.set_tick_params(labelsize=1)
@@ -76,11 +76,11 @@ else:
         output_list.append(res_listx[i] + res_listy[i] + res_listz[i])
     
     for i in range(0, len(output_list)):
-        if output_list[i] > 100:
-            non_collusions = non_collusions + 1 
+        if -100 < output_list[i] < 100:
+            collusions = collusions + 1 
             
-print("The number of collusions are: ", 1000 - non_collusions)  
-print("The number of non_collusions are: ", non_collusions)
+print("The number of collusions are: ", collusions)  
+print("The number of non_collusions are: ", 150 - collusions)
 
 """
 © Ari Barnett - Undergraduate Research; St. Petersburg College 2021
