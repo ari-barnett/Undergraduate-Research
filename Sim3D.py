@@ -7,7 +7,6 @@ Created on Mon Feb  8 10:34:04 2021
 """
 import matplotlib.pyplot as plt
 import random 
-#import numpy as np
 
 def group(x,y,z):
     group_point = [(x[i], y[i], z[i]) for i in range(0, len(x))]
