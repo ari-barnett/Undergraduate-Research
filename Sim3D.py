@@ -80,7 +80,7 @@ else:
             collusions = collusions + 1 
             
 print("The number of collusions are: ", collusions)  
-print("The number of non_collusions are: ", 150 - collusions)
+print("The number of non_collusions are: ", 1000 - collusions)
 
 """
 © Ari Barnett - Undergraduate Research; St. Petersburg College 2021
