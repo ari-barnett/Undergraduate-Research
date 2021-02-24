@@ -48,9 +48,7 @@ for idx, i in np.ndenumerate(x):
     
     if i == 0 and find_neighbors(x,m,n) == 3:
         new[m,n] = 1
-    elif i == 1 and find_neighbors(x,m,n) == 2:
-        new[m,n] = 1
-    elif i == 1 and find_neighbors(x,m,n) == 3:
+    elif i == 1 and find_neighbors(x,m,n) in (2,3):
         new[m,n] = 1
     elif i == 1 and find_neighbors(x,m,n) >= 4:
         new[m,n] = 0
