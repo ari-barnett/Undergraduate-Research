@@ -9,6 +9,7 @@ institution: St. Petersburg College (Spring 2021)
 import numpy as np
 import random 
 from matplotlib import pyplot, colors
+import time 
 
 
 print('Conways Game of Life')
@@ -101,14 +102,15 @@ Display of the inital game board.
 
 print('ORIGINAL BOARD:')
 print('')
-print(x)
+#print(x)
 pyplot.figure(figsize=(10,10))
 pyplot.imshow(new, cmap = colormap, interpolation='nearest')
-pyplot.title("Original Board")
+#pyplot.title("Original Board")
 pyplot.axis('off')
 pyplot.grid()
 
 pyplot.show()
+time.sleep(1)
 print('')
 
 '''===================================================================================================================='''
@@ -122,16 +124,17 @@ print('NEW BOARDS:')
 print('')
 while (iteration < desire_turns):
     
-    print('Update', iteration + 1)
-    print(update(x))
+    #print('Update', iteration + 1)
+    #print(update(x))
     update(x)
     pyplot.figure(figsize=(8,8))
     pyplot.imshow(new, cmap = colormap, interpolation='nearest')
-    pyplot.title(iteration + 1)
+    #pyplot.title(iteration + 1)
     pyplot.axis('off')
 
     pyplot.show()
-    print('')
+    #print('')
     
     x = np.copy(new)
     iteration = iteration + 1
+    time.sleep(0.2)
