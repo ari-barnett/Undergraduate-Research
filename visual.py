@@ -138,3 +138,7 @@ while (iteration < desire_turns):
     x = np.copy(new)
     iteration = iteration + 1
     time.sleep(0.2)
+    
+    '''
+    © Ari Barnett - Undergraduate Research; St. Petersburg College 2021
+    '''
